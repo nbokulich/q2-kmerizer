@@ -44,8 +44,6 @@ class KmerizerTests(TestPluginBase):
                      'GTGCAAG', 'GTTAGCG', 'TACGAGA', 'TACGGGA', 'TAGCGTT',
                      'TGCAAGC', 'TTAGCGT'],
             index=['s1', 's2', 's3'])
-        print(observed.to_dataframe().T.to_numpy())
-        print(observed.to_dataframe().index)
 
         # note: observed df is transposed because it is transposed by biom
         pdt.assert_frame_equal(observed.to_dataframe().T, expected,
@@ -83,9 +81,6 @@ class KmerizerTests(TestPluginBase):
                      'GTGCAAG', 'GTTAGCG', 'TACGAGA', 'TACGGGA', 'TAGCGTT',
                      'TGCAAGC', 'TTAGCGT'],
             index=['s1', 's2', 's3'])
-
-        print(observed.to_dataframe().T.to_numpy())
-        print(observed.to_dataframe().index)
 
         # note: observed df is transposed because it is transposed by biom
         pdt.assert_frame_equal(observed.to_dataframe().T, expected,
