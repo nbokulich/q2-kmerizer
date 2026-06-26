@@ -41,7 +41,7 @@ def seqs_to_kmers(sequences: pd.Series, table: pd.DataFrame,
     # analyzer is changed to char_wb to accommodate linked sequences
     # i.e., so that kmers do not bridge gaps between sequences.
     # This will, however, yield terminal kmers that contain one space.
-    # Functionally speaking this probably does not matter during 
+    # Functionally speaking this probably does not matter during
     # tokenization and the same terminal kmers are likely to be found in
     # many sequences.
     if tfidf:
